@@ -28,3 +28,10 @@ coverage/
 # Build
 dist/
 build/
+
+# Turborepo
+.turbo/
+
+# Next.js
+.next/
+out/

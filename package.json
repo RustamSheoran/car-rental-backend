@@ -1,38 +1,29 @@
 {
-  "name": "car-rental-backend",
+  "name": "car-rental-monorepo",
   "version": "1.0.0",
-  "description": "Car Rental System Backend with Express, PostgreSQL, and JWT authentication",
-  "main": "server.js",
+  "description": "Car Rental System - Monorepo with Next.js frontend and Express backend",
+  "private": true,
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
-    "seed": "npx prisma db seed",
-    "prisma:generate": "prisma generate",
-    "prisma:push": "prisma db push"
-  },
-  "prisma": {
-    "seed": "ts-node prisma/seed.ts"
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean"
   },
   "keywords": [
     "car-rental",
+    "monorepo",
+    "turborepo",
+    "nextjs",
     "express",
-    "prisma",
-    "jwt",
-    "authentication"
+    "prisma"
   ],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@prisma/client": "^6.19.2",
-    "bcryptjs": "^3.0.3",
-    "express": "^5.2.1",
-    "jsonwebtoken": "^9.0.3"
-  },
   "devDependencies": {
-    "dotenv": "^17.2.3",
-    "nodemon": "^3.1.11",
-    "prisma": "^6.19.2",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
-  }
+    "turbo": "^2.0.0"
+  },
+  "workspaces": [
+    "apps/*"
+  ]
 }
